@@ -6,10 +6,10 @@ export default function Home() {
   return (
    <div className='p-5'>
     <div>
-      <h2>Tshirts</h2>
-        <div className="py-64">
+      <h2 className='text-2xl'>Tshirts</h2>
+        <div className="py-4">
           <div className="w-64">
-            <div className="">
+            <div className="bg-blue-100 p-5 rounded-xl">
               <img src="/products/" alt=""/>
             </div>
             <div className="mt-2">
@@ -22,7 +22,7 @@ export default function Home() {
             </p>
             <div className='flex mt-1'>
               <div className='text-2xl font-bo;d grow'>35000/-</div>
-              <button className='bg-emerald-400 text-white py-1 px-3'>+</button>
+              <button className='bg-emerald-400 text-white py-1 px-3 rounded-xl'>+</button>
             </div>
           </div>
         </div>
