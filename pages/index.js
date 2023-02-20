@@ -1,8 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import { useEffect, useState } from 'react';
 export default function Home() {
+  const [productsInfo, setProductsInfo] = useState(init)
+  useEffect(() => {
+    fetch('api/products') 
+    .then(response => response.join())
+    .then(json => setProductsInfo(json));
+  }, []);
+
+  const categoryNames = new Set(productsInfo.map(p=> p.category));
+
+
   return (
    <div className='p-5'>
     <div>
